@@ -1,23 +1,23 @@
-# Algorithm Drill: Prime Factors
+# Algorithm Drill: Простые множители
 
-## Summary
-Around 300 BC, the Greek mathematician [Euclid][wikipedia euclid] proved that every integer greater than one is either (1) a prime number, or (2) the product of multiplying prime numbers.  In this challenge, we're going to write a method that will return the prime factors of a given number.
+## Введение
+Около 300 года до Н.Э. греческий математик [Евклид][wikipedia euclid] доказал, что каждое число, большее 1, либо (1) простое, либо (2) является произведением простых. В этом задании мы собираемся написать метод, который будет возвращать простые множители данного числа.
 
-### Math Concepts
-In order to complete this challenge, we'll need to be familiar with a few math concepts which are described below.
+### Математические концепции
+Чтобы выполнить это задание, нам нужно ознакомиться с несколькими математическими понятиями, которые описаны ниже.
 
-**Prime Numbers**  
-If we're going to identify a number's prime factors, we'll need to determine whether or not a number is [prime][wikipedia prime numbers].  The following points describe prime numbers.
+**Простые числа**  
+Если мы собираемся найти простые множители числа, нам нужно определить, явялется ли число [простым][wikipedia prime numbers]. Следующие правила описывают простые числа.
 
-- The number is greater than one (e.g., one is not prime).
-- The number is evenly divisible no numbers other than one and itself.
+- Число больше единицы (1 - не простое)
+- Число делится нацело только на само себя и на 1.
 
-Following these rules, we can say that two is prime: two is greater than one, and it is only evenly divisible by one and itself.  Three is also prime.  Four is not prime because it is evenly divisible by two.  What about five, six, and seven?
+Следуя этим правилам, мы можем сказать, что 2 - простое: 2 больше 1 и оно нацело делится только на 1 и на само себя. 3 тоже простое. 4 - не простое, потому что оно нацело делится на 2. Что можно сказать о 5, 6, 7?
 
-**Factors**  
-We'll also want to be clear on what factors are.  A number is a factor of another number, if that other number is evenly divisible by the number.  To illustrate, two is a factor of four because four is evenly divisible by two.  One and four are also factors of four.  One, two, three, and six are all factors of six because six is evenly divisible by each of them.
+**Множитель (делитель)**  
+Мы также должны определиться с тем, что такое множитель. Число является множителем другого, если это другое число делится нацело на данное. Например, 2 - множитель 4, потому что 4 нацело делится на 2. 1 и 4 также являются делителями 4. 1, 2, 3 и 6 являются множителями шести, потому что 6 делится нацело на каждое из них.
 
-**Prime Factorization**
+**Разложение на простые множители**
 ```
 4  = 2 * 2
 6  = 2 * 3
@@ -32,7 +32,7 @@ We'll also want to be clear on what factors are.  A number is a factor of anothe
 12056      = 2 * 2 * 2 * 11 * 137 
 123123123  = 3 * 3 * 41 * 333667
 ```
-*Figure 1*.  Prime factorization examples.
+*Рис 1*.  Примеры разложения на простые множители.
 
 When we say that our method will return the prime factors of a number, what do we mean?  We need to find the set of prime numbers that multiply together to equal the original number.  The process of breaking a number down to a set of prime factors is known as [prime factorization][wikipedia integer factorization].  To illustrate, it would be like seeing the number four as the product of two times two.  Or, seeing twelve as the product of two times two times three.  (see Figure 1)
 
@@ -62,9 +62,9 @@ Do we do any rework in our method?  For example, do we check whether any number 
 Writing an efficient prime factorization algorithm is a problem that mathematicians and computer scientists have unsuccessfully tried to solve ... [at least for very large numbers][wikipedia rsa-768].  There was even a [contest][wikipedia rsa challenge] held to incentivize working on algorithms to find the prime factors of specific numbers.
 
 
-[wikipedia euclid]: http://en.wikipedia.org/wiki/Euclid
+[wikipedia euclid]: https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D0%BA%D0%BB%D0%B8%D0%B4
 [wikipedia integer factorization]: https://en.wikipedia.org/wiki/Integer_factorization
-[wikipedia prime numbers]: http://en.wikipedia.org/wiki/Prime_number
+[wikipedia prime numbers]: https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE
 [wikipedia rsa-768]: https://en.wikipedia.org/wiki/RSA_numbers#RSA-768
 [wikipedia rsa challenge]: https://en.wikipedia.org/wiki/RSA_Factoring_Challenge
 
