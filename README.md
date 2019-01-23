@@ -34,38 +34,38 @@
 ```
 *Рис 1*.  Примеры разложения на простые множители.
 
-When we say that our method will return the prime factors of a number, what do we mean?  We need to find the set of prime numbers that multiply together to equal the original number.  The process of breaking a number down to a set of prime factors is known as [prime factorization][wikipedia integer factorization].  To illustrate, it would be like seeing the number four as the product of two times two.  Or, seeing twelve as the product of two times two times three.  (see Figure 1)
+Когда мы говорим, что наш метод вернет простые множители числа, что мы имеем в виду? Нам нужно найти набор простых чисел, при умножении которых, мы поучаем данное число. Процесс разбиения числа на набор простых множителей называется [разложением на простые множители][wikipedia integer factorization]. Например, число четыре можно представить как произведение 2 на 2. Или 12, как произведение 2 на 2 на 3. (см Рис 1)
 
 
 ## Releases
-### Release 0: Find a Number's Prime Factors
-```ruby
-prime_factors(6)
+### Release 0: Найти простые множители числа
+```JS
+primeFactors(6)
 # => [2, 3]
-prime_factors(8)
+primeFactors(8)
 # => [2, 2, 2]
-prime_factors(123123123)
+primeFactors(123123123)
 # => [3, 3, 41, 333667]
 ```
-*Figure 2*. Our method takes a number and returns its prime factors.
+*Рис 2*. Наш метод принимает число и возвращает простые множители.
 
-We'll write a `prime_factors` method that accepts one argument, a number, and returns an array of the number's prime factors.  As always, we need to document the behavior of our method through tests.  The basic behavior of our method is shown in Figure 2.  Are there any edge cases that we should cover in tests?  How should our method behave if the argument passed in is itself a prime number?
-
-
-### Release 1: Refactor
-Let's examine our code to see if it's the highest quality that we can write.  Are there any code smells that we can eliminate?  We want to have methods that do only one thing.  Can we extract any methods?  Maybe for determining whether or not a number is prime, or for finding possible factors of a given number?  
-
-Do we do any rework in our method?  For example, do we check whether any number is prime more than once?  If we are making repeat calculations, can we remove them?
+Мы реализуем метод `primeFactors`, который принимает один аргумент, число и возвращает массив из простых множителей числа. Как всегда, нам нужно описать поведение метода через тесты. Основное поведение метода показано на Рис2. Есть ли крайние случаи, которые мы должны охватить в тестах? Как должна работать наша функция, если аргумент на входе сам является простым числом?
 
 
-## Conclusion
-Writing an efficient prime factorization algorithm is a problem that mathematicians and computer scientists have unsuccessfully tried to solve ... [at least for very large numbers][wikipedia rsa-768].  There was even a [contest][wikipedia rsa challenge] held to incentivize working on algorithms to find the prime factors of specific numbers.
+### Release 1: Рефакторинг
+Давайте осмотрим наш код и подумаем, наилучшее ли у него качество. Есть ли некоторые неприятные вещи, от которых мы можем избавиться? Нам нужны методы, которые делают только одну вещь. Можем ли мы их выделить? Может, ддя того чтобы определить, является ли число простым, или нахождения возможных делителей данного числа?
+
+Выполняем ли мы лишнюю работу в нашей функции? Например, проявляем ли мы, что число простое, больше чем один раз? Если мы выполняем повторяющиеся вычисления, можем ли мы их удалить?
+
+
+## Заключение
+Написание эффективного алгоритма факторизации простых чисел это проблема, которую математики и информатики безуспешно пытались разрешить...[по крайней мере, для очень больших чисел][wikipedia rsa-768]. Даже проводились [соревнования][wikipedia rsa challenge] для того, чтобы стимулировать работу над алгоритмами, чтобы найти простые множители определенных чисел.
 
 
 [wikipedia euclid]: https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D0%BA%D0%BB%D0%B8%D0%B4
-[wikipedia integer factorization]: https://en.wikipedia.org/wiki/Integer_factorization
+[wikipedia integer factorization]: https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D1%86%D0%B5%D0%BB%D1%8B%D1%85_%D1%87%D0%B8%D1%81%D0%B5%D0%BB
 [wikipedia prime numbers]: https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE
-[wikipedia rsa-768]: https://en.wikipedia.org/wiki/RSA_numbers#RSA-768
+[wikipedia rsa-768]: https://ru.wikipedia.org/wiki/RSA-%D1%87%D0%B8%D1%81%D0%BB%D0%B0#RSA-768
 [wikipedia rsa challenge]: https://en.wikipedia.org/wiki/RSA_Factoring_Challenge
 
 
